@@ -6,6 +6,7 @@ class CreatePoints < ActiveRecord::Migration
       t.datetime :date_there
       t.string :speed
       t.string :heading
+      t.string :altitude
     end
   end
 
