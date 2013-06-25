@@ -1,10 +1,11 @@
 source 'https://rubygems.org'
 
 gem "sinatra"
+gem "grape"
 gem "rake"
 gem "activerecord"
 gem "sinatra-activerecord"
-gem "sqlite3"
+gem "pg"
 
 group :development do
   gem "shotgun"
