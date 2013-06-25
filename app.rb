@@ -9,6 +9,6 @@ require "./api"
 
 class Web < Sinatra::Base
   get '/' do
-    "Hello world."
+    erb :'points/index'
   end
 end
