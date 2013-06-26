@@ -4,9 +4,9 @@ class CreatePoints < ActiveRecord::Migration
       t.string :latitude
       t.string :longitude
       t.datetime :date_there
-      t.string :speed
-      t.string :heading
-      t.string :altitude
+      t.float :speed
+      t.float :heading
+      t.float :altitude
     end
   end
 
