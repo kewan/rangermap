@@ -30,19 +30,15 @@
     <script>
 
 var routePoints = [];
-
 $(function() {
-  $.getJSON('/points.json', function(data) {
-   
-    $.each(data, function(key, point) {
-      routePoints.push(new google.maps.LatLng(point.latitude, point.longitude));
-    });
-
-    initialize();
-  });
+  $.getJSON('/points.json', function(data) { initialize(data); });
 });
 
-function initialize() {
+function initialize(data) {
+  $.each(data, function(key, val) {
+    routePoints.push(new google.maps.LatLng(val.point.latitude, val.point.longitude));
+  });
+
   var myLatLng = new google.maps.LatLng(-18.521283, 27.773438);
   var mapOptions = {
     zoom: 5,
