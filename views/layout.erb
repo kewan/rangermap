@@ -29,9 +29,10 @@
     <script src="//maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
     <script>
 
+var routePoints = [];
+
 $(function() {
   $.getJSON('/points.json', function(data) {
-    var routePoints = [];
    
     $.each(data, function(key, point) {
       routePoints.push(new google.maps.LatLng(point.latitude, point.longitude));
