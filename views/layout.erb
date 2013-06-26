@@ -34,7 +34,7 @@ $(function() {
     var routePoints = [];
    
     $.each(data, function(key, point) {
-      items.push(new google.maps.LatLng(point.latitude, point.longitude));
+      routePoints.push(new google.maps.LatLng(point.latitude, point.longitude));
     });
 
     initialize();
