@@ -16,7 +16,7 @@ task :import_points do
 
     Point.create!(latitude: match_data[:latitude], 
                   longitude: match_data[:longitude], 
-                  date_there: match_data[:date_there], 
+                  date_there: match_data[:time], 
                   speed: match_data[:speed], 
                   heading: match_data[:heading], 
                   altitude: match_data[:altitude])
