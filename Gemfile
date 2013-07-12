@@ -7,6 +7,8 @@ gem "rake"
 gem "activerecord"
 gem "sinatra-activerecord"
 gem "pg"
+gem "gmail"
+gem "httparty"
 
 group :development do
   gem "shotgun"
