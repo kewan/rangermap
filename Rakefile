@@ -10,7 +10,8 @@ task :import_points do
 
   gmail.inbox.emails(:unread).each do |mail|
     next unless mail.subject.include? "Message from Sat4Rent"
-    match_data = regex.match(mail.parts[0].body.decoded)
+    #match_data = regex.match(mail.parts[0].body.decoded)
+    match_data = regex.match(mail.body.decoded)
 
     next if match_data.nil?
 
